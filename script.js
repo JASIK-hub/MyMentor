@@ -2,6 +2,8 @@ let taskContainer=document.querySelector('.task')
 let data = JSON.parse(localStorage.getItem('mentorsData')) || [];
 let notesData=JSON.parse(localStorage.getItem('notes')) || []
 let taskData=JSON.parse(localStorage.getItem('tasks')) || []
+console.log(notesData)
+console.log(data)
 console.log(taskData)
 document.querySelectorAll('.mentor').forEach(mentor=>{
     mentor.addEventListener('click',()=>{
@@ -172,6 +174,7 @@ function mentorExists(goal,mentorName){
                         displayAllTasks(mentorName)
                         checkboxChecked(mentorName)
                       })
+                       document.querySelector('#NoteBtn').onclick = () => addNote(mentorName);
                     displayAllTasks(mentorName)
                     
 }
