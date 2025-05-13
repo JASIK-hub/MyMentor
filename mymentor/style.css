@@ -1,0 +1,222 @@
+*{
+    margin:0;
+    font-family: monospace;
+}
+header{
+    display:flex;
+    padding:30px;
+    justify-content:space-between;
+    align-items: center;
+}
+header nav{
+    color:white;
+    font-weight: bold;
+}
+header a{
+    color:white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.container{
+    padding:20px 100px;
+}
+.backgroundHeader{
+    position: absolute;
+    top:0;
+    left:0;
+    background-image:url(img/pexels-photo-7163354.jpeg);
+    height:590px;
+    width:100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    z-index: -2;
+    border-bottom: 70px solid rgb(217, 169, 36);
+}
+.overlay{
+    position: absolute;
+    top:0;
+    left:0;
+    background-color:black;
+    height:590px;
+    width:100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+nav{
+    font-size: 30px;
+}
+h1{
+    margin-top: 485px;
+    color:white;
+    font-size:clamp(20px,2vw,4vw);
+    text-align: center;
+}
+
+.description{
+    padding:60px;
+    box-shadow: 0px 0px 10px 0px rgb(167, 167, 167);
+    margin-top: 100px;
+    padding-right: 200px;
+}
+.description h3{
+    font-size:30px
+}
+.description p{
+    font-size: 20px;
+    line-height: 1.7;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+hr{
+    margin-top: 50px;
+}
+.mentorsContainer{
+    display: flex;
+    margin-top: 200px;
+    gap:50px
+}
+.mentorsContainer h2{
+    font-size: 35px;
+    max-width:350px
+}
+.mentors{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows:repeat(2,400px);
+    gap:20px;
+    flex:1
+    
+}
+
+.mentors div{
+    background-repeat: no-repeat;
+    background-size: cover;;
+    border-radius: 20px;
+    position: relative;
+    transition: 0.5s;
+}
+.mentors .mentor:nth-of-type(1){
+    background-image: url(img/25338f488af2c45912c15ebab325e363.jpg);
+}
+.mentors div:nth-child(2){
+    background-image: url(img/4ab2af26e00092ca45805920666d5a3e.jpg)
+}
+.mentors div:nth-child(3){
+    background-image: url(img/55805e4aa3c42e91d39d1e1fd2013e60.jpg);
+}
+.mentors div:nth-child(4){
+    background-image: url(img/b9e45d2667c272dfb56e22fc0e1fbc64.jpg);
+
+}
+.mentors div .name{
+    font-size: 15px;
+    position: absolute;
+    right:10px;
+    top:10px;
+    padding:20px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.777);
+}
+footer{
+    display:flex;
+    background-color:rgb(246, 196, 58);
+    padding:70px;
+    margin-top: 250px;
+    justify-content: space-between;
+}
+footer,.right{
+    display: flex;
+    gap:60px
+}
+footer .right div{
+    display:flex;
+    flex-direction: column;
+    font-size: 20px;
+    gap:10px
+}
+a{
+    text-decoration: none;
+    color:black
+}
+.mentors div:hover{
+    transform: scale(1.02);
+    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);  
+}
+.task{
+    margin-top: 150px;
+}
+.task li{
+    font-size: 25px;
+    padding:5px
+} @media screen and ( max-width:1350px){
+    .tasksAndNotes{
+    flex-direction: column;
+    gap:80px
+}
+    .addTaskContainer{
+        justify-content: space-between
+    }
+}
+@media screen and (max-width:1050px){
+    .addTaskContainer{
+        justify-content: space-between;
+    }
+    
+    .navbar{
+        display:none
+    }
+    header{
+        justify-content: center;
+    }
+    .description{
+        padding:60px
+    }
+    .mentorsContainer{
+        flex-direction: column;
+        gap:20px;
+        
+    }
+    .mentorsContainer h2{
+        max-width: none;
+        align-self: center;
+    }
+    .mentors div:nth-child(3),.mentors div:nth-child(4){
+        background-position: 0px;
+    }
+} @media screen and (max-width:770px){
+    .addTaskContainer{
+        
+        flex-direction: column;
+    }
+    .NotesContainer{
+        display: flex !important;
+        flex-direction: column;
+        gap:10px
+    }
+}
+@media screen and (max-width:580px){
+    .mentors{
+    grid-template-columns:1fr;
+    grid-template-rows: repeat(4,400px);
+}
+.description h3{
+    font-size:18px
+}
+}
+@media screen and (max-width:440px){
+    .container {
+        padding:10px 30px
+    }
+    footer,.right{
+        flex-direction: column;
+        align-items: center;
+    }
+    .right div{
+        align-items: center;
+    }
+    
+}
+
+
+
